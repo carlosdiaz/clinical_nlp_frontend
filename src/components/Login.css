@@ -1,0 +1,128 @@
+/* src/components/Login.css */
+/* Styles for the login form */
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    /* Added for centering within App.js */
+    margin: auto;
+}
+
+.login-form h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+    position: relative;
+    display: inline-block;
+}
+
+.login-form h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #9b59b6;
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #71b7e6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(113, 183, 230, 0.5);
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #71b7e6, #9b59b6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.login-button:hover:not(:disabled) {
+    background: linear-gradient(to right, #9b59b6, #71b7e6);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center; /* Center the message text */
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.forgot-password,
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.forgot-password a,
+.signup-link a {
+    color: #71b7e6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover,
+.signup-link a:hover {
+    color: #9b59b6;
+    text-decoration: underline;
+}
